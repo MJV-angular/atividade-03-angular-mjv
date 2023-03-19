@@ -1,0 +1,36 @@
+@keyframes slide-bottom {
+  0% {
+    -webkit-transform: translateY(-100px);
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0px);
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+nav {
+  position: sticky;
+  display: flex;
+  padding: 0 3%;
+  top: 0;
+  height: 80px;
+  align-items: center;
+  -webkit-animation: slide-bottom 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: slide-bottom 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  background: rgba(96, 72, 157, 0.9);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(6.5px);
+  -webkit-backdrop-filter: blur(6.5px);
+  box-shadow: 0px 11px 15px -3px rgba(0, 0, 0, 0.1);
+
+  z-index: 999999;
+  figure {
+    width: 130px;
+    img {
+      width: 100%;
+    }
+  }
+}
